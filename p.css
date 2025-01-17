@@ -1,0 +1,524 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Dosis', sans-serif;
+    margin:auto;
+}
+
+ul,nav{
+    list-style: none;
+}
+
+header a{
+    text-decoration: none;
+    cursor: pointer;
+    color:inherit;
+}
+
+
+a:hover{
+    color:red;
+}
+
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:10;
+    width:100%;
+
+    /*These are different kinds of displays for web browsers */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding:35px 100px 0;
+}
+
+header nav li a{
+    font-size:25px;
+}
+
+header h2{
+    text-transform: uppercase;
+}
+
+header nav{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+header nav li{
+    margin:0 15px;
+}
+
+header nav li:first-child{
+    margin-left:0;
+}
+
+header nav li:last-child{
+    margin-right:0;
+}
+
+/*---------------------------Header/Nav Responsive Area---------------------------*/
+
+@media(max-width:320px){
+    
+    html, body { 
+        width:100%;  
+        overflow:hidden; 
+    }
+
+    header nav{
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+
+    header h3{
+        display:none;
+    }
+}
+
+@media(max-width:600px){
+
+   
+    header{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    header h2{
+        margin-bottom: 15px;
+    }
+
+    header nav{
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+
+    header nav li{
+        margin: 0 4px;
+        font-size: 20px;
+    }
+
+    .fixed-area .section-title{
+        display:none;
+    }
+
+    .fixed-area{
+        padding-top: 100px;
+    }
+
+}
+
+@media(max-width:1024px){
+    header{
+        padding:15px 25px;
+        flex-wrap: wrap;
+    }
+
+    header nav li{
+        margin: 0 4px;
+        font-size: 20px;
+    }
+
+}
+
+/*---------------------------------Columns With The Icons--------------------------*/
+
+.fixed-area .section-title{
+    padding-top:30px;
+    text-align: center;
+    margin-top:100px;
+    font-size:50px; 
+}
+
+.fixed-content{
+    width:100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap:wrap; /*We give flex wrap because there will be overflow based on the amount of text in the P */
+    justify-content: center;
+}
+
+.fixed-content li{
+    padding:0 30px;
+    flex-basis:33%;
+    text-align: center;
+    margin-top:100px;
+}
+
+.fixed-content li i{
+    font-size: 50px;
+    color:crimson;
+    margin-bottom: 25px;
+}
+
+.fixed-content li h4{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.fixed-content li p{
+    font-size: 25px;
+    margin-bottom:50px;
+}
+
+/*------------------------Pricing Responsive Section------------------------*/
+@media(max-width:600px){
+    .fixed-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .fixed-content li:last-child{
+        margin-bottom:60px;
+    }
+}
+
+@media(max-width:1024px){
+    .fixed-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .fixed-content li:last-child{
+        margin-bottom:60px;
+    }
+    .fixed-area .section-title{
+        padding-top:15px;
+    }
+
+    .fixed-content li{
+        margin-top:50px;
+    }
+    
+}
+
+/*------------------------------Pricing Tables Section----------------------------------*/
+.flex-grid {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-evenly;
+}
+  
+.flex-grid .col {
+    width: 30%;
+}
+  
+.col {
+    background-color: lightgray ;
+    padding: 30px;
+}
+
+
+.sub-title {
+    background-color:lightgray ;
+}
+
+.sub-title h3{
+    text-decoration: underline;
+    text-align: center;
+}
+
+/*------------------FIXED PRICING TABLE, Softtware, Hardware, Network----------------*/
+
+.table-content{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    border-collapse:collapse;
+    background-color: lightgray;
+}
+
+.table-content td:last-child{
+    text-align: center;
+}
+
+.table-content td{
+    font-size:20px;
+    padding:12px 15px;
+    text-align: start;
+}
+
+.table-content th{
+    width:40%;
+    background-color: crimson;
+    color:#ffffff;
+    padding:15px 80px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/*-----------------------------Timed Pricing-------------------------------*/
+
+.table-content1{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    border-collapse:collapse;
+    background-color:lightgray ;
+}
+
+.table-content1 td{
+    font-size:20px;
+    padding:12px 15px;
+    text-align: start;
+}
+
+.table-content1 td:last-child{
+    padding-left: 130px;
+    text-align: end;
+}
+
+.table-content1 th{
+    width:40%;
+    background-color: crimson;
+    color:#ffffff;
+    padding:15px 80px;
+    font-size:30px;
+    text-align: center;
+}
+
+
+/*-----------------------Support Plans Table-----------------------*/
+
+.table-content2{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    border-collapse:collapse;
+    background-color:lightgray;
+}
+
+.table-content2 td{
+    font-size:20px;
+    padding:12px 15px;
+    text-align: start;
+}
+
+.table-content2 th{
+    width:40%;
+    background-color: crimson;
+    color:#ffffff;
+    font-size:30px;
+    padding:15px 80px;
+    text-align: center;
+}
+
+.table-content2 td:last-child{
+    text-align: center;
+}
+
+tbody td a{
+    color:crimson;
+}
+
+/*---------------------------TABLE RESPONSIVE AREA----------------------------*/
+
+@media(max-width:600px){
+.flex-grid{
+    flex-direction: column;
+}
+.flex-grid .col {
+    width: 100%;
+}
+  
+.col {
+    padding: 15px;
+}
+
+.table-content2 th{
+    width:50%;
+    padding:15px 100px;
+    font-size:20px;
+}
+
+.table-content1 th{
+    width:50%;
+    padding:15px 100px;
+    font-size:20px;
+}
+
+.table-content th{
+    width:50%;
+    padding:15px 100px;
+    font-size:20px;
+}
+
+.table-content1 td:last-child{
+    padding-left: 50px;
+}
+
+}
+
+@media(max-width:1024px){
+    .flex-grid{
+        flex-direction: column;
+    }
+    .flex-grid .col {
+        width: 100%;
+    }
+      
+    .col {
+        padding: 15px;
+    }
+
+    .table-content2 td{
+        width:100%;
+     }
+
+    .table-content1 td{
+       width:100%;
+    }
+
+    .table-content td{
+        width:100%;
+     }
+
+}
+
+@media(max-width:1280px){
+    .table-content1 td:last-child{
+        padding-left: 25px;
+    }
+}
+
+/*------------------------TERMS AND CONDITIONS--------------------------*/
+
+.terms p a{
+    text-decoration: none;
+    color:black;
+}
+
+.terms p a i{
+    padding-left:5px;
+}
+
+.terms p a:hover{
+    color:crimson;
+}
+
+.terms p{
+    width:100%;
+    margin-top:25px;
+    margin-bottom: 10px;
+    font-size:45px;
+    text-align: center;
+}
+
+/*---------------------RESPONSIVE TERMS & CONDITIONS-----------------*/
+@media(max-width:600px){
+    .terms p{
+        font-size:24px;
+    }
+}
+
+/*------------------------PAYMENT METHODS--------------------------*/
+.method{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width:50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    padding: 30px 0;
+    font-size:25px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.method h3{
+    margin:30px 0px 25px;
+    font-size: 50px;
+}
+
+.method li{
+    padding-bottom:50px;
+}
+
+.method li:last-child{
+    padding-bottom: 0px;
+}
+
+.method li:first-child{
+    padding-top:10px;
+}
+
+.method i{
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 50px;
+    color:crimson;
+}
+
+
+/*---------------------Footer--------------------*/
+
+footer{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: black;
+    padding: 50px 0;
+    font-size:25px; 
+
+}
+
+/*-----------------Footer Responsive Area---------------*/
+
+@media(max-width:600px){
+    footer{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:1024px){
+    footer{
+        font-size:25px;
+    }
+}
+
+
+
+
+
+  

@@ -1,0 +1,608 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Dosis', sans-serif;
+    margin:auto;
+}
+
+ul,nav{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color:inherit;
+}
+
+a:hover {
+    color:crimson;
+}
+
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:10;
+    width:100%;
+
+    /*These are different kinds of displays for web browsers */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding:35px 100px 0;
+
+}
+
+header nav li a{
+    font-size:25px;
+}
+
+header h2{
+    text-transform: uppercase;
+}
+
+header nav{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+header nav li{
+    margin:0 15px;
+}
+
+header nav li:first-child{
+    margin-left:0;
+}
+
+header nav li:last-child{
+    margin-right:0;
+}
+
+/*Header Responsive Area*/
+
+@media(max-width:320px){
+
+    header{
+    flex-direction: column;
+    align-items:center;
+    }
+
+    header nav{
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+
+    header h3{
+        display:none;
+    }
+
+    header nav li a{
+        text-align: center;
+        width:100%;
+        
+    }
+}
+
+@media(max-width:600px){
+
+    header{
+        flex-direction: column;
+        align-items:center;
+    }
+
+    header h2{
+        margin-bottom: 15px;
+    }
+
+    header nav{
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+
+    header nav li a{
+        width:100%;
+    }
+
+}
+
+@media(max-width:1024px){
+    header{
+        padding:15px 25px;
+        flex-wrap: wrap;
+    }
+
+    header nav li{
+        margin: 0 4px;
+        font-size: 20px;
+    }
+
+}
+
+/*Banner Area*/
+section{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 100px;
+}
+
+@media(max-width:1000px){
+    section{
+        padding: 125px 30px;
+    }
+}
+
+@media(max-width:600px){
+    section{
+        padding:100px 50px;
+    }
+}
+section p{
+    max-width:800px;
+    text-align:center;
+    margin-bottom:35px;
+    padding:0 20px;
+    line-height: 2;
+}
+
+.banner-area{
+    position:relative;
+    justify-content: center;
+    min-height: 100vh;
+    color:#fff;
+    text-align: center;
+}
+
+.banner-area .banner-img{
+    background-image: url('Toronto-skyline-min.jpg');
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    -webkit-background-size:cover;
+    background-size:cover;
+    z-index:-1;
+}
+
+.banner-area .banner-img:after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: #000;
+    opacity:0.8;
+
+}
+
+.banner-area h1{
+    margin-bottom: 15px;
+    font-size: 65px;
+    font-family: merienda;
+}
+
+.banner-area h3{
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+.banner-area a.banner-btn{
+    padding:15px 35px;
+    background: crimson;
+    border-radius: 50px;
+    text-transform: uppercase;
+    
+}
+
+a.banner-btn:hover{
+    color:white;
+}
+
+@media(max-width:800px){
+    .banner-area{
+        min-height: 600px;
+    }
+    .banner-area h1{
+        font-size: 32px;
+    }
+    .banner-area h3{
+        font-size: 20px;
+    }
+    .banner-area a.banner-btn{
+        padding:15px 40px;
+    }
+}
+
+/*About Section*/
+ul.about-content{
+    width:100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap:wrap; /*We give flex wrap because there will be overflow based on the amount of text in the P */
+    justify-content: center;
+}
+
+.about-content li{
+    padding:20px;
+    height:290px;
+    background-clip:content-box;
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position:center;
+}
+
+.about-left{
+    flex-basis:50%;
+    background-image:url("FULL\ LOGO-min.jpg");
+}
+
+.about-right{
+    flex-basis:50%;
+}
+
+.about-area p{
+    max-width: 800px;
+    margin-bottom: 35px;
+    line-height:1.5;
+    font-size:25px;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 50px;
+}
+
+.section-title{
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom:5%;
+}
+
+
+/*About Us Responsive Section*/
+
+@media(max-width:1024px){
+    .about-left, .about-right{
+        flex-basis:100%;
+        margin-left: 15px;
+    }
+
+    .about-left{
+        background-image:url("FULL\ LOGO-min.jpg");
+    }
+
+    .about-area .section-title {
+        display: flex;
+        justify-content: center;
+        margin-left: 9px;
+    }
+    
+    .about-content li{
+        padding:8px;
+    }
+    .about-right h2, .about-right p{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top:15px;
+    }
+
+}
+
+
+@media(max-width:415px){
+    .about-left .about-right{
+        flex-basis:100%;
+    }
+
+    .about-content li{
+        padding:1px;
+        height:330px;
+        width:330px;
+    }
+
+    .about-left{
+        background-image:url("Mobile\ Logo.jpg");
+        margin: 0px 4px;
+    }
+
+    .about-right h2, .about-right p{
+        text-align: center;
+    }
+    
+    .about-area p{
+        font-size:18px;
+    }
+
+   
+}
+
+/*Services*/
+
+#services{
+    background:#ddd;
+}
+
+
+ul.services-content{ /*Ul that has the class "services-content"*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width:100%;
+    flex-wrap:wrap; /*We give flex wrap because there will be overflow based on the amount of text in the P */
+    justify-content: space-evenly;
+}
+
+.services-content li{
+    padding:0 30px;
+    flex-basis:50%;
+    text-align: center;
+}
+
+.services-content li i{
+    font-size: 50px;
+    color:crimson;
+    margin-bottom: 25px;
+}
+
+.services-content li h4{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.services-content li p{
+    font-size: 25px;
+    margin-bottom: 35px;
+    
+}
+
+.pricing-btn{
+    padding:15px 45px;
+    background:crimson;
+    border-radius: 50px;
+    margin-top:50px;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+.pricing-btn:hover{
+        color:white;
+}
+
+/*--Services Responsive Area--*/
+
+
+@media (max-width:600px){
+    .services-area h3{
+        padding-bottom:50px;
+    }
+
+    .services-content a .pricing-btn{
+        display: flex;
+        justify-content: center;
+        padding:20px 40px;
+    }
+
+    .services-content li p{
+        font-size:18px;
+        margin-bottom:5px;
+    }
+
+    .services-content li .laptop{
+        padding-bottom:15px;
+    }
+
+    .services-content li .shield{
+        padding-bottom: 15px;
+    }
+
+    .services-content li .wifi{
+        padding-bottom: 15px;
+    }
+
+    .services-content li .wrench{
+        padding-bottom: 15px;
+    }
+    
+    .services-content li{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width:1024px){
+    .services-content li{
+        flex-basis:100%;
+        margin-bottom: 65px;
+    }
+
+    .services-content li:first-child{
+        margin-bottom: 0;
+    }
+
+    .services-content li:last-child{
+        margin-bottom: 0;
+    }
+
+    .services-content li p{
+        padding:0;
+        font-size:18px;
+    }
+
+    .services-content li .laptop{
+        padding-bottom:100px;
+    }
+
+    .services-content li .shield{
+        padding-bottom: 50px;
+    }
+
+    .services-content li .wifi{
+        padding-bottom: 50px;
+    }
+
+    .services-content li .wrench{
+        padding-bottom: 50px;
+    }
+
+    .pricing-btn{
+        width:50%;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+
+/*Contact Area*/
+#contact{
+    background:#fff;
+}
+
+ul.contact-content{
+    width:100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap:wrap; /*We give flex wrap because there will be overflow based on the amount of text in the P */
+    justify-content: center;
+}
+
+.contact-content li{
+    padding:0 30px;
+    flex-basis:33%;
+    text-align: center;
+}
+
+.contact-content li i{
+    font-size:50px;
+    color:crimson;
+    margin-bottom: 25px;   
+}
+
+.contact-content li p{
+    margin:0;
+    font-size: 25px;
+}
+
+.contact-content li p:last-child{
+    margin:0;
+    font-size: 25px;
+}
+
+/*Contact Responsive Area*/
+
+@media(max-width:1024px){
+    .contact-content li{
+        flex-basis: 100%;
+        margin-bottom: 65px;
+    }
+
+    .contact-content li:last-child{
+        margin-bottom: 0;
+    }
+
+    .contact-content li p{
+        padding:0;
+        font-size: 25px;
+    }
+
+    .cover{
+            max-width: 100%;
+            width: auto; /*IE8 bug fix*/
+        }
+}
+
+@media(max-width:600px){
+    .contact-area h3{
+        font-size:40px;
+        padding-bottom:50px;
+
+    } 
+    
+}
+
+/*Map for Service Area*/
+.coverage{
+    padding-top:15px;
+    background-color: #ddd;
+}
+
+.coverage iframe{
+    width: 100%;
+ 
+}
+
+.coverage h3{
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/*Responsive Area for Service Area*/
+@media(max-width:600px){
+    .coverage h3 {
+        font-size:35px; 
+    }
+}
+
+
+/*Footer*/
+
+footer{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    font-size:25px;
+    padding: 60px 0;
+
+}
+
+/*Footer Responsive Area*/
+
+@media(max-width:1024px){
+    footer{
+        font-size:25px;
+    }
+}
+
+
